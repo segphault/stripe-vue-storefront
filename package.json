@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express-history-api-fallback": "^2.1.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "stripe": "^4.14.0"
+  }
+}
