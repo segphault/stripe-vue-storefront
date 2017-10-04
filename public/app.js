@@ -112,7 +112,7 @@ const ProductDetails = {
   },
   methods: {
     add(ev) {
-      this.store.addToCart(this.selected, this.quantity);
+      this.store.addToCart(this.selection, this.quantity);
     }
   }
 };

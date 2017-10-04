@@ -17,12 +17,10 @@ app.get("/stripe/key", (req, res) => {
 });
 
 app.get("/api/products", (req, res) =>
-  stripe.products.list()
-  .then(({data}) => res.json(data)));
+  stripe.products.list().then(({data}) => res.json(data)));
 
 app.get("/api/products/:id", (req, res) =>
-  stripe.products.retrieve(req.params.id)
-  .then(item => res.json([item])));
+  stripe.products.retrieve(req.params.id).then(item => res.json([item])));
 
 app.post("/api/order", (req, res) => {
   let {email, items, source, shipping} = req.body;
@@ -38,4 +36,4 @@ app.post("/api/order", (req, res) => {
 app.use(express.static("public"));
 app.use(fallback("index.html", {root: "public"}));
 
-app.listen(8000);
+app.listen(9000, () => console.log("Running on port 9000"));
